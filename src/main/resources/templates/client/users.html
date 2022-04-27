@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="htpp://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Utilisateur</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container fluid text-center">
+   <div><h2>Liste des Utilisateurs </h2></div>
+    <div class="mr-2">
+        <a class="h3" th: href="@{/users/ajouter}">Ajouter  un Nouveau Client</a>
+    </div>
+    <div>
+
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+            <tr>
+            <th>ID</th>
+            <th>NonClient</th>
+            <th>PrenonClient</th>
+            <th>AdresseClient</th>
+            <th>Telephone</th>
+            </tr>
+            </thead>
+            <tbody>
+            <th:block th: each=" client'"rt : ${ListClient}">
+                <tr>
+                    <td>[${client.id}]]</td>
+                    <td>[[${client.NonClient}]]</td>
+                    <td>[[${client.PrenonClient}]]</td>
+                    <td>[[${client.AdresseClient}]]</td>
+                    <td>[[${client.Telephone}]]</td>
+                    <td>
+                        <a class="h4"  th: href="@{{'/users/edit' +${{client.id}}">Edit</a>
+                        <a class="h4"  th: href="@{{'/users/supprimer' +${client.id}}">Supprimer</a>
+                    </td>
+                </tr>
+            </th:block>
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
