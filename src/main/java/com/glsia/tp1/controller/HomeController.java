@@ -18,4 +18,17 @@ public class HomeController {
     {
         return "template/index";
     }
+
+    /*@GetMapping("/user")
+    public String EspaceUser()
+    {
+        return ("<h1>Welecome User</h1>");
+
+    }
+    @GetMapping("/admin")
+    public String EspaceAdmin()
+    {
+        return ("<h1>Welecome Admin</h1>");
+    } */
+
 }
