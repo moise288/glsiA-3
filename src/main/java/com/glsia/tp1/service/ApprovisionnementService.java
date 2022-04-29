@@ -27,8 +27,18 @@ public class ApprovisionnementService {
         return approvisionnementRepository.findById(id).get();
     }
 
+    public void updateApprovisionnement(Integer id, int quantite)
+    {
+        /*approvisionnementRepository.updateApprovisionnement(id, quantite);*/
+    }
     public void deleteApprovisionnement(int id)
     {
         approvisionnementRepository.deleteById(id);
+    }
+
+    public void updateQuantityApprovisionnement(int id, int quantite)
+    {
+        //approvisionnementRepository.updateQuantityApprovisionnement(id, quantite);
+        //approvisionnementRepository.deleteById(id);
     }
 }

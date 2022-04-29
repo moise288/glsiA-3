@@ -62,23 +62,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <i class="mdi mdi mdi-cart menu-icon"></i>
-              <span class="menu-title">Les produits</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" th:href="@{/produit/create}">Ajouter un produit</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" th:href="@{/produit/show}">Liste des produits</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
               <i class="mdi mdi-animation menu-icon"></i>
               <span class="menu-title">Catégories</span>
@@ -96,9 +79,50 @@
             </div>
           </li>
           <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic">
+              <i class="mdi mdi mdi-cart menu-icon"></i>
+              <span class="menu-title">Produits</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic3">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" th:href="@{/produit/create}">Ajouter un produit</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" th:href="@{/produit/show}">Liste des produits</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="mdi mdi-cart-plus menu-icon"></i>
               <span class="menu-title">Approvisionnement</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/client/create}">
+              <i class="mdi mdi-account-multiple menu-icon"></i>
+              <span class="menu-title">Ajouter un client</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/client/show}">
+              <i class="mdi mdi-account-multiple menu-icon"></i>
+              <span class="menu-title">Liste des clients</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/vente/create}">
+              <i class="mdi mdi-square-inc-cash menu-icon"></i>
+              <span class="menu-title">Ajouter une vente</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/vente/show}">
+              <i class="mdi mdi-square-inc-cash menu-icon"></i>
+              <span class="menu-title">Liste des ventes</span>
             </a>
           </li>
           <li class="nav-item">
@@ -281,8 +305,10 @@
                     <p class="m-0">A votre service</p>
                   </a>
                 </div>
-                <button type="button" class="btn btn-primary mt-2 mt-sm-0 btn-icon-text">
-                  <i class="mdi mdi-plus-circle"></i> Ajouter un Produit </button>
+                <a th:href="@{/produit/create}">
+                  <button type="button" class="btn btn-primary mt-2 mt-sm-0 btn-icon-text">
+                    <i class="mdi mdi-plus-circle"></i> Ajouter un Produit </button>
+                </a>
               </div>
             </div>
 
@@ -395,7 +421,8 @@
                       <h1 class="font-20 font-weight-semibold mb-0"> Un coup d'oeil sur </h1>
                       <h1 class="font-20 font-weight-semibold">le stock</h1>
                       <p class="font-10 font-weight-semibold"> Etre a l'affuit de l'etat de stock des produits </p>
-                      <button class="btn bg-white font-12">Vérifier stock</button>
+                      <a th:href="@{/approvisionnement/index}"><button class="btn bg-white font-12">Vérifier stock</button></a>
+
                     </div>
                   </div>
                 </div>

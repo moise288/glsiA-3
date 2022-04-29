@@ -12,51 +12,22 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Data
 public class Approvisionnement {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  int id;
 
-    private Integer id;
+    @Column(nullable = false)
+    private int quantite;
 
-    private Integer Quantite;
+    private LocalDate dateCreation;
 
-    LocalDate dateApprov;
+    private LocalDate dateModification;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "produit_id", insertable = false, updatable = false)
-
     private Produit produit;
-
     private int produit_id;
 
-    public Approvisionnement(Produit produit) {
-        this.produit = produit;
-    }
 
-    public int getProduit_id() {
-        return produit_id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public Integer getQuantite() {
-        return Quantite;
-    }
-
-    public LocalDate getDateApprov() {
-        return dateApprov;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setQuantite(Integer quantite) {
-        Quantite = quantite;
-    }
-
-    public void setDateApprov(LocalDate dateApprov) {
-        this.dateApprov = dateApprov;
-    }
 }

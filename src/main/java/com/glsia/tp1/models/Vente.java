@@ -16,5 +16,12 @@ public class Vente {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     private int id;
+    private String nomProduit;
+    private int qteProduit;
+    private int prixProduit;
+
+    @ManyToOne()
+    @JoinColumn(name = "produitId", insertable = false, updatable = false)
+    private Produit produit;
 
 }

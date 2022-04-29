@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Approvisionner un produit - Gestion vente</title>
+
+    <th:block th:replace="fragments/metaAndLinks :: metaAndLinks"></th:block>
+</head>
+
+<body id="page-top">
+
+<th:block th:replace="fragments/nav :: navigation"></th:block>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h5 class="h5 mb-0 text-gray-800 text-bold">Nouveau approvisionnement</h5>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <div class="col-lg-7">
+            <div class="p-5">
+                <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Ajouter un nouveau approvisionnement!</h1>
+                </div>
+                <form class="user" th:action="@{/approvisionnement/save}" th:object="${oneProduit}" method="post">
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="hidden"  name="produit_id" th:value="${oneProduit.id}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="text" readonly th:value="${oneProduit.libelle}" class="form-control btn-user btn-block">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="number" required class="form-control btn-user btn-block" name="quantite" placeholder="quantite">
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="btn btn-success btn-user btn-block">Valider</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->
+
+<th:block th:replace="fragments/footer :: footer"></th:block>
+
+
+</body>
+
+</html>

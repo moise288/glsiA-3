@@ -67,24 +67,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                    <i class="mdi mdi mdi-cart menu-icon"></i>
-                    <span class="menu-title">Les produits</span>
-                    <i class="menu-arrow"></i>
-                </a>
-                <div class="collapse" id="ui-basic">
-                    <ul class="nav flex-column sub-menu">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/produit/create}">Ajouter un produit</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" th:href="@{/produit/show}">Liste des produits</a>
-                            </li>
-                        </ul>
-                </div>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
                     <i class="mdi mdi-animation menu-icon"></i>
                     <span class="menu-title">Catégories</span>
@@ -102,9 +84,50 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic">
+                    <i class="mdi mdi mdi-cart menu-icon"></i>
+                    <span class="menu-title">Produits</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-basic3">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/produit/create}">Ajouter un produit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/produit/show}">Liste des produits</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="mdi mdi-cart-plus menu-icon"></i>
                     <span class="menu-title">Approvisionnement</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/client/create}">
+                    <i class="mdi mdi-account-multiple menu-icon"></i>
+                    <span class="menu-title">Ajouter un client</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/client/show}">
+                    <i class="mdi mdi-account-multiple menu-icon"></i>
+                    <span class="menu-title">Liste des clients</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/vente/create}">
+                    <i class="mdi mdi-square-inc-cash menu-icon"></i>
+                    <span class="menu-title">Ajouter une vente</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/vente/show}">
+                    <i class="mdi mdi-square-inc-cash menu-icon"></i>
+                    <span class="menu-title">Liste des ventes</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -246,19 +269,6 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-logout d-none d-md-block">
                         <button class="btn btn-sm btn-danger">infos</button>
-                    </li>
-                    <li class="nav-item nav-profile dropdown d-none d-md-block">
-                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <div class="nav-profile-text">Thèmes </div>
-                        </a>
-                        <div class="dropdown-menu center navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="flag-icon flag-icon-bl me-3"></i> Sombre </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
-                                <i class="flag-icon flag-icon-cn me-3"></i> Clair </a>
-                            <div class="dropdown-divider"></div>
-                        </div>
                     </li>
                     <li class="nav-item nav-logout d-none d-lg-block">
                         <a class="nav-link" th:href="@{/home}">
